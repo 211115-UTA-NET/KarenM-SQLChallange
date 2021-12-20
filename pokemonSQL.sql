@@ -16,8 +16,8 @@ CREATE TABLE Pokemon
 CREATE TABLE [Type] 
 (
 	Id INT NOT NULL IDENTITY PRIMARY KEY , 
-	typeId INT NOT NULL (500),
-	[Name] NVARCHAR NOT NULL (100), 
+	TypeId INT (100) NOT NULL,
+	[Name] NVARCHAR (100) NOT NULL, 
 );
 
 CREATE TABLE PokemonType --pokemonid and typeide need to reference back to pokemon and type.
@@ -30,13 +30,13 @@ CREATE TABLE PokemonType --pokemonid and typeide need to reference back to pokem
 
 --Inserting data to tables
 INSERT Pokemon
-	(id, PokemonName, PokemonHeight, PokemonWeight)
+	(Id, PokemonName, PokemonHeight, PokemonWeight)
 VALUES
 	(1, Bulbasur, 7, 70),
 	(2, Dittom, 3, 40);
 
 INSERT [Type]
-	(typeId, [Name])
+	(TypeId, [Name])
 VALUES
 	(2, Normal),
 	(1, Grass);
